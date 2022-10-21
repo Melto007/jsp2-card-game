@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Lato:wght@400;700;900&family=Montserrat:wght@400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: #120E43;
+    --white-color: #fff;
+    --black-color: #000;
+}
+
+body {
+    background: url('../images/sea-beach-with-big-rocks_107791-4944.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 800px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.attempt-heading {
+    position: absolute;
+    top: -14%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 2rem;
+    font-family: 'Bungee Spice',sans-serif;
+}
+
+.attemptPoint {
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 2rem;
+    font-family: 'Bungee Spice',sans-serif;
+}
+
+.grid {
+    width: 200px;
+    height: 172px;
+    background-color: var(--white-color);
+    box-shadow: 0.5rem 0.5rem 1rem var(--black-color);
+}
+
+.grid img { 
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.activeImg {
+    transform: rotateY(180deg);
+    transition-delay: 0.2s;
+    transition: all 0.5s;
+}
+
+.flipBack {
+    transform: rotateY(0);
+    transition-delay: 0.2s;
+    transition: all 0.5s;
+}
+
+.section-1 {
+    text-align: center;
+}
+
+.section-1 h1 {
+    font-size: 5rem;
+    font-family: 'Bungee Spice',sans-serif;
+}
+
+.section-1 button {
+    padding: 1rem 1.5rem;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 2rem;
+    background-color: var(--background-color);
+    color: var(--white-color);
+    transition: all 0.5s;
+}
+
+.section-1 button:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0.5rem 0.5rem 1rem var(--black-color);
+}
+
+.section-1 button:active {
+    transform: translateY(0);
+}
+
+.active-btn {
+    display: none;
+}
+
+.section-2 {
+    text-align: center;
+}
+
+.section-2 img {
+    width: 100%;
+    height: 30vh;
+}
+
+.section-2 h1, .add-score {
+    font-size: 3rem;
+    font-family: 'Bungee Spice',sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+.section-2 {
+    background-color: var(--background-color);
+    padding: 2rem 4rem;
+    border-radius: 1rem;
+    box-shadow: 0.7rem 0.7rem 1rem var(--black-color);
+}
+
+.section-2 .button {
+    padding: 1.3rem 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1.7rem;
+    margin: 0 0.5rem;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.section-2 .button:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0.5rem 0.5rem 1rem var(--black-color);
+}
+
+.section-2 .button:active {
+    transform: translateY(0);
+}
+
+@media screen and (max-width: 800px) {
+    .grid {
+        width: 180px;
+        height: 172px;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .container {
+        width: 100%;
+        height: 500px;
+    }
+
+    .grid {
+        width: 160px;
+        height: 172px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        width: 100%;
+        height: 500px;
+    }
+
+    .grid {
+        width: 140px;
+        height: 170px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .container {
+        width: 100%;
+        height: 480px;
+    }
+
+    .grid {
+        width: 120px;
+        height: 170px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section-1 h1 {
+        font-size: 4rem;
+    }
+
+    .section-1 button {
+        font-size: 1rem;
+    }
+
+    .container {
+        width: 100%;
+        height: 300px;
+    }
+
+    .grid {
+        width: 100px;
+        height: 120px;
+    }
+
+    .section-2 img {
+        height: 20vh;
+    }
+
+    .section-2 h1, .add-score {
+        font-size: 2rem;
+    }
+
+    .section-2 {
+        padding: 1rem 2rem;
+    }
+
+    .section-2 .button {
+        padding: 1.3rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .section-1 h1 {
+        font-size: 2rem;
+    }
+
+    .section-1 button {
+        font-size: 0.8rem;
+        padding: 1rem 1rem;
+    }
+
+    .container {
+        width: 100%;
+        height: 200px;
+    }
+
+    .grid {
+        width: 100px;
+        height: 80px;
+    }
+
+    .section-2 img {
+        height: 15vh;
+    }
+
+    .section-2 h1, .add-score {
+        font-size: 1rem;
+    }
+
+    .section-2 {
+        padding: 1rem 1.4rem;
+    }
+
+    .section-2 .button {
+        padding: 1rem 1.3rem;
+        font-size: 1rem;
+    }
+}
